@@ -1,0 +1,99 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="main-container">
+            <p>Backend Status:
+                <% if (locals.data) {%>
+                    <%= data %>
+                <% } else { %>
+                    Error ⛔️. Please check Backend Server running or not.
+                <% } %>
+            </p>
+
+        
+
+        <div class="slidecontainer">
+            <form action="/submit" method="POST">
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="nitrogen" class="form-label mt-3" style="font-weight: bolder;">Select Nitrogen (N) Level: <span id="NitrogenValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">Nitrogen is essential for crop growth, as it is a key component of chlorophyll, amino acids, and proteins. It supports vigorous vegetative growth, enhances photosynthesis, and improves crop yield and quality. Nitrogen is crucial for leaf and stem development, enabling plants to produce the energy needed for growth. A deficiency leads to yellowing of leaves, stunted growth, and poor productivity. Proper nitrogen management, including the use of fertilizers and organic matter, ensures optimal plant health while minimizing environmental impacts like leaching or pollution.</p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Nitrogen" class="slider" id="NitrogenRange">
+                </div>
+
+                <br>
+
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="phosphorous" class="form-label mt-3" style="font-weight: bolder;">Select Phosphorus (P) Level: <span id="phosphorousValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">Phosphorus is crucial for crop growth, playing a vital role in energy transfer, photosynthesis, and the formation of DNA and RNA. It promotes root development, flowering, and seed production, contributing to overall plant health and higher yields. Phosphorus is also essential for early plant establishment and strong structural development. A deficiency can result in stunted growth, delayed maturity, and reduced productivity. Ensuring adequate phosphorus levels in the soil through proper fertilization and management is essential for sustainable and efficient crop production.</p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Phosphorus" class="slider" id="phosphorousRange">
+                </div>
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="potassium" class="form-label mt-3" style="font-weight: bolder;">Select Potassium (K) Level: <span id="potassiumValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">Potassium is vital for crop growth, enhancing photosynthesis, water regulation, and nutrient transport within plants. It strengthens plant cell walls, improving resistance to diseases, pests, and environmental stress like drought or frost. Potassium regulates stomatal function, aiding water-use efficiency and reducing wilting. It also improves crop quality, boosting yield, size, flavor, and storage life. Adequate potassium levels in soil ensure balanced nutrient uptake, preventing deficiencies that can hinder plant development. Sustainable potassium management is key to maintaining soil fertility and optimizing agricultural productivity.</p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Potassium" class="slider" id="potassiumRange">
+                </div>
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="temperature" class="form-label mt-3" style="font-weight: bolder;">Select Temperature (Celsius) Level: <span id="temperatureValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">
+                        Temperature significantly influences soil processes and crop growth. It affects seed germination, root development, nutrient uptake, and microbial activity. Optimal soil temperature ensures proper enzymatic reactions, enhancing nutrient availability and water absorption by plants. Different crops have specific temperature ranges for maximum growth; deviations can lead to stress, reduced yield, or crop failure. Soil temperature also impacts evaporation rates and organic matter decomposition. Effective management, like mulching or irrigation, helps maintain suitable soil temperatures, promoting healthy and sustainable crop production.
+                    </p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Temperature" class="slider" id="temperatureRange">
+                </div>
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="humidity" class="form-label mt-3" style="font-weight: bolder;">Select Humidity Level: <span id="humidityValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">
+                        Humidity plays a crucial role in soil and crop growth by influencing water availability, nutrient absorption, and plant transpiration rates. Optimal humidity helps maintain soil moisture levels, ensuring that plants can absorb essential nutrients efficiently. High humidity reduces water loss through transpiration, while low humidity can increase stress and dehydration in plants. It also affects microbial activity in the soil, which is vital for nutrient cycling. Balanced humidity levels support healthy crop development, prevent diseases, and optimize agricultural productivity.
+                    </p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Humidity" class="slider" id="humidityRange">
+                </div>
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="ph" class="form-label mt-3" style="font-weight: bolder;">Select pH Level: <span id="phValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">
+                        Soil pH affects nutrient availability, microbial activity, and overall plant health. Most crops thrive in slightly acidic to neutral soils (pH 6-7), where essential nutrients like nitrogen, phosphorus, and potassium are most accessible. Soil that is too acidic (low pH) or too alkaline (high pH) can lead to nutrient imbalances, poor root growth, and reduced crop yields. Adjusting soil pH through amendments like lime or sulfur ensures optimal growing conditions for plants and enhances agricultural productivity.
+                    </p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Ph" class="slider" id="phRange">
+                </div>
+                <br>
+                <div class="mb-3 shadow" style="padding: 20px; border-radius: 20px; margin: -10px;">
+                    <label for="rainfall" class="form-label mt-3" style="font-weight: bolder;">Select Rain Fall Level: <span id="rainfallValue"></span></label>
+                    <br>
+                    <p style="font-weight: 200;">
+                        Rainfall is critical for soil moisture, which is essential for crop growth. Adequate rainfall ensures that plants receive the water needed for nutrient uptake, photosynthesis, and healthy development. Insufficient rainfall leads to drought stress, stunted growth, and poor yields, while excessive rainfall can cause waterlogging, nutrient leaching, and root damage. Consistent and well-distributed rainfall supports optimal soil conditions, promoting strong crops and efficient water use. Managing rainfall levels through irrigation or soil conservation techniques is vital for maintaining healthy crop production.
+                    </p>
+                    <br>
+                    <input type="range" min="1" max="100" value="1" name="Rainfall" class="slider" id="rainfallRange">
+                </div>
+
+                <div style="display: flex; justify-content: center;" class="mt-5">
+                    <button type="submit" class="btn btn-success shadow" style="width: 200px;">Analyze ➡</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="card" style="width: 100%; border: none; border-radius: 20px; text-align: center;">
+        <div class="card-body">
+          <h5 class="card-title">How To Use</h5>
+          <br>
+          <p class="card-text">Select the slider ranges as required. Set slider based on your reading.</p>
+        </div>
+    </div>
+    
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,81 @@
+        <div class="m-5" style="display: flex; flex-direction:row; justify-content: left; border: none;">
+            <ul style="list-style-type: none; font-weight: bold;">
+                <li><a style="text-decoration: none; color: rgb(249, 142, 66);" href="https://my-site-jet-beta.vercel.app/#home">My WebSite</a></li>
+                <li><a style="text-decoration: none; color: rgb(25, 92, 250);" href="https://www.linkedin.com/in/sakib-dalal/">My Linkedin</a></li>
+                <li><a style="text-decoration: none; color: rgb(58, 84, 51);" href="https://github.com/Sakib-Dalal">My GitHub</a></li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+    <!-- Step 4 - Add a dynamic year to the footer using JS. -->
+    <p style="text-align: center;">Crop Recommendation AI © <%= new Date().getFullYear() %> </p>
+    </footer>
+
+    <script>
+        var sliderNitrogen = document.getElementById("NitrogenRange");
+        var outputNitrogen = document.getElementById("NitrogenValue");
+        outputNitrogen.innerHTML = sliderNitrogen.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderNitrogen.oninput = function() {
+            outputNitrogen.innerHTML = this.value;
+        }
+
+        var sliderPhosphorous = document.getElementById("phosphorousRange");
+        var outputPhosphorous = document.getElementById("phosphorousValue");
+        outputPhosphorous.innerHTML = sliderPhosphorous.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderPhosphorous.oninput = function() {
+            outputPhosphorous.innerHTML = this.value;
+        }
+
+        var sliderPotassium = document.getElementById("potassiumRange");
+        var outputPotassium = document.getElementById("potassiumValue");
+        outputPotassium.innerHTML = sliderPotassium.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderPotassium.oninput = function() {
+            outputPotassium.innerHTML = this.value;
+        }
+
+        var sliderTemperature = document.getElementById("temperatureRange");
+        var outputTemperature = document.getElementById("temperatureValue");
+        outputTemperature.innerHTML = sliderTemperature.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderTemperature.oninput = function() {
+            outputTemperature.innerHTML = this.value;
+        }
+
+        var sliderHumidity = document.getElementById("humidityRange");
+        var outputHumidity = document.getElementById("humidityValue");
+        outputHumidity.innerHTML = sliderHumidity.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderHumidity.oninput = function() {
+            outputHumidity.innerHTML = this.value;
+        }
+
+        var sliderPh = document.getElementById("phRange");
+        var outputPh = document.getElementById("phValue");
+        outputPh.innerHTML = sliderPh.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderPh.oninput = function() {
+            outputPh.innerHTML = this.value;
+        }
+
+        var sliderRainfall = document.getElementById("rainfallRange");
+        var outputRainfall = document.getElementById("rainfallValue");
+        outputRainfall.innerHTML = sliderRainfall.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        sliderRainfall.oninput = function() {
+            outputRainfall.innerHTML = this.value;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
