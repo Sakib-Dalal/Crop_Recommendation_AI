@@ -1,13 +1,14 @@
 <%- include("partials/header.ejs") %>
     <div class="main-container">
-        <div class="card" style="width: 100%; border: none; border-radius: 20px; text-align: center;">
+        <div class="card" style="width: 100%; border: none; border-radius: 20px; text-align: left;">
             <div class="card-body">
-              <h5 class="card-title"><%= message %></h5>
+              <h5 class="card-title"><%= prediction.charAt(0).toUpperCase() + prediction.slice(1) %></h5>
               <br>
-              <p class="card-text">Select the slider ranges as required. Set slider based on your reading.</p>
-              
+              <p style="text-align: justify;"><%= llm_message %></p>
+              <button class="btn btn-success shadow mt-5" style="width: 200px;"><a href="/" style="text-decoration: none; color: white;">Home</a></button>
             </div>
+
         </div>
     </div>
-    <div style="height: 50vh;"></div>
+    <div style="height: 10vh;"></div>
 <%- include("partials/footer.ejs") %>

@@ -31,8 +31,9 @@ app.post("/submit", async (req, res) => {
         // Send data to Flask server
         const response = await axios.post("http://127.0.0.1:5000/submit", data);
         console.log("Response from Flask server:", response.data);
-        const message = response.data.Message;
-        res.render("submit.ejs", {message: message});
+        const prediction = response.data.prediction;
+        const llm_message = response.data.llm_message;
+        res.render("submit.ejs", {prediction: prediction, llm_message: llm_message});
         // res.send(response.data.Message); // Send Flask's response back to the client
     } catch (error) {
         console.error("Error communicating with Flask server:", error.message);
