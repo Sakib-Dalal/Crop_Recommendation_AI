@@ -24,6 +24,18 @@ The **Crop Recommendation AI App** is an intelligent web application designed to
 
 ---
 
+## Screen Shots
+
+<img src="./Image/home.jpeg">
+<img src="./Image/home_2.jpeg">
+<img src="./Image/home_3.jpeg">
+<img src="./Image/home_4.jpeg">
+
+<img src="./Image/submit.jpeg">
+<img src="./Image/submit_2.jpeg">
+
+---
+
 ## How It Works
 1. Navigate to the home page and adjust the sliders to match the soil and environmental conditions of your land.
 2. Click the **Analyze** button.
@@ -32,6 +44,7 @@ The **Crop Recommendation AI App** is an intelligent web application designed to
    - Predicts the best crop to grow.
    - Fetches a representative image of the crop using the Pixabay API.
    - Provides a comprehensive guide on the crop, written by the Ollama NLP model.
+
 
 ---
 
@@ -48,6 +61,8 @@ The **Crop Recommendation AI App** is an intelligent web application designed to
 - **Machine Learning**: Scikit-learn (model training and testing)
 - **Natural Language Processing**: Ollama 3.2 (1-billion parameter model)
 - **Image Search**: Pixabay API
+
+<img src="./Image/blueprint.png">
 
 ---
 
