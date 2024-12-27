@@ -24,7 +24,7 @@ The **Crop Recommendation AI App** is an intelligent web application designed to
 
 ---
 
-## Screen Shots
+## Screen Shots 
 
 <img src="./Image/home.jpeg">
 <img src="./Image/home_2.jpeg">
