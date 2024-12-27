@@ -33,7 +33,8 @@ app.post("/submit", async (req, res) => {
         console.log("Response from Flask server:", response.data);
         const prediction = response.data.prediction;
         const llm_message = response.data.llm_message;
-        res.render("submit.ejs", {prediction: prediction, llm_message: llm_message});
+        const crop_image = response.data.crop_image;
+        res.render("submit.ejs", {prediction: prediction, llm_message: llm_message, crop_image: crop_image});
         // res.send(response.data.Message); // Send Flask's response back to the client
     } catch (error) {
         console.error("Error communicating with Flask server:", error.message);

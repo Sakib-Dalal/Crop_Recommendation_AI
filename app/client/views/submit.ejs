@@ -1,13 +1,19 @@
 <%- include("partials/header.ejs") %>
     <div class="main-container">
-        <div class="card" style="width: 100%; border: none; border-radius: 20px; text-align: left;">
+        <div class="card" style="width: 100%; border: none; border-radius: 20px; text-align: center;">
             <div class="card-body">
-              <h5 class="card-title"><%= prediction.charAt(0).toUpperCase() + prediction.slice(1) %></h5>
+                <h2 style="font-weight: 100;">Crop Recommended 🌾</h2>
+                <hr>
+                <img style="height: 300px; border-radius: 50px;" class="shadow mt-3" src=<%= crop_image %> />
+                <br>
+                <br>
+              <h4 class="card-title" style="font-style: normal;"><%= prediction.charAt(0).toUpperCase() + prediction.slice(1) %></h4>
               <br>
+              <h5 style="font-weight: lighter;">About</h5>
               <p style="text-align: justify;"><%= llm_message %></p>
-              <button class="btn btn-success shadow mt-5" style="width: 200px;"><a href="/" style="text-decoration: none; color: white;">Home</a></button>
+              <br>
+              <button class="btn btn-success shadow mt-3" style="width: 100px;"><a href="/" style="text-decoration: none; color: white;">Home</a></button>
             </div>
-
         </div>
     </div>
     <div style="height: 10vh;"></div>
