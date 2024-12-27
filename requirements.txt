@@ -8,6 +8,5 @@ joblib
 Flask
 python-dotenv
 requests
-dotenv
 
 jupyterlab
